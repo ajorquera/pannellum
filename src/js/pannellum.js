@@ -1917,7 +1917,9 @@ function processOptions(isPreview) {
 
     // Fill in load button label and loading box text
     controls.load.innerHTML = '<p>' + config.strings.loadButtonLabel + '</p>';
-    infoDisplay.load.box.innerHTML = '<p>' + config.strings.loadingLabel + '</p>';
+    var p = document.createElement('p');
+    p.innerHTML = config.strings.loadingLabel;
+    infoDisplay.load.box.insertBefore(p, infoDisplay.load.box.firstChild);
 
     // Process other options
     for (var key in config) {
