@@ -1745,8 +1745,8 @@ function destroyHotSpots() {
                 current = current.parentNode;
             }
             renderContainer.removeChild(current);
-            delete hs.div;
         }
+        hs.length = 0;
     }
 }
 
